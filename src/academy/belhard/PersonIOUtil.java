@@ -25,25 +25,6 @@ public class PersonIOUtil {
         }
     }
 
-//    public static void readPersons(String filename) throws Exception {
-//        try (FileReader reader = new FileReader("Heroes")) {
-//            Scanner scan = new Scanner(reader);
-//            int i = 1;
-//            while (scan.hasNextLine()) {
-//                System.out.println(i + " - " + scan.nextLine());
-//                i++;
-//            }
-////           if ()
-////               EmptySourceFileException y = new EmptySourceFileException(" ");
-////               System.out.println(y);
-////           }
-//
-//        } catch (Exception e) {
-//            e.getMessage();
-//        }
-//    }
-//}
-
         public static void readPersons(String filename) throws Exception {
 
         String fileName = "Heroes";
@@ -53,7 +34,7 @@ public class PersonIOUtil {
             String str;
             list = br.lines().collect(Collectors.toList());
             if (list.isEmpty() == true) {
-                EmptySourceFileException y = new EmptySourceFileException("Секундочку... ");
+                EmptySourceFileException y = new EmptySourceFileException();
                 System.out.println(y);
             }
 
