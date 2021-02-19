@@ -29,7 +29,7 @@ public class Main {
 
         p1.readPersons("Heroes");
 
-        p1.readFromFile();
+
 
     }
 
