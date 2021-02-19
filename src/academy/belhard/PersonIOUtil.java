@@ -14,10 +14,10 @@ public class PersonIOUtil {
 
         try (FileWriter writer = new FileWriter(filename)) {
             for (Person person : persons) {
-                writer.write(person.getFirstName() + ", " +
-                        person.getLastName() + ", " +
-                        person.address.getCity() + ", " +
-                        person.address.getStreet() + ", " +
+                writer.write(person.getFirstName() + " :: " +
+                        person.getLastName() + " :: " +
+                        person.address.getCity() + " :: " +
+                        person.address.getStreet() + " :: #" +
                         person.address.getHouseNumber() + "\n");
             }
         } catch (Exception e) {
@@ -31,7 +31,6 @@ public class PersonIOUtil {
         List<String> list = new ArrayList<>();
 
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
-            String str;
             list = br.lines().collect(Collectors.toList());
             if (list.isEmpty() == true) {
                 EmptySourceFileException y = new EmptySourceFileException();
@@ -41,7 +40,7 @@ public class PersonIOUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        
         list.forEach(System.out::println);
 
     }
