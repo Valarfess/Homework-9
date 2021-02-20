@@ -1,7 +1,7 @@
 package academy.belhard;
 
 public class EmptySourceFileException extends Exception {
-    public EmptySourceFileException () {
-        super("Пусто однако...");
+    public EmptySourceFileException (String message) {
+        super("Тут пусто однако...");
     }
 }

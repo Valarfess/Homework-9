@@ -7,14 +7,14 @@ public class Person {
     public String lastName;
     public Address address;
 
-    public Person (String firstName, String lastName, Address address) throws Exception {
+    public Person (String firstName, String lastName, Address address) throws NullFieldException {
         try {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
 
             if (firstName == null || lastName == null || address == null)
-            { NullFieldException x = new NullFieldException("");
+            { NullFieldException x = new NullFieldException("Ошибка!");
                 System.out.println(x);
             }
             else;
@@ -22,10 +22,6 @@ public class Person {
             e.printStackTrace();
         }
     }
-
-    public Person(String firstName, String lastName, String city, String street, int houseNumber) {
-    }
-
 
     public String getFirstName() {return firstName;}
     public void setFirstName(String firstName) {this.firstName = firstName;}

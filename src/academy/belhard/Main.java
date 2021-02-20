@@ -25,9 +25,11 @@ public class Main {
         persons.add(person3);
 
         PersonIOUtil p1 = new PersonIOUtil();
-        p1.writePersons("Heroes", persons);
+        p1.writePersons("Heroes.txt", persons);
 
-        p1.readPersons("Heroes");
+        p1.readPersons("Heroes.txt");
+
+
 
 
 
