@@ -2,6 +2,6 @@ package academy.belhard;
 
 public class EmptySourceFileException extends Exception {
     public EmptySourceFileException (String message) {
-        super("Error! Поля должны быть заполнены");
+        super("Error! Файл пуст");
     }
 }
