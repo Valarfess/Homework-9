@@ -7,17 +7,16 @@ public class Person {
     public String lastName;
     public Address address;
 
-    public Person (String firstName, String lastName, Address address) throws NullFieldException {
+    public Person(String firstName, String lastName, Address address) throws NullFieldException {
         try {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.address = address;
 
-            if (firstName == null || lastName == null || address == null)
-            { NullFieldException x = new NullFieldException("Ошибка!");
+            if (firstName == null || lastName == null || address == null) {
+                NullFieldException x = new NullFieldException("Ошибка!");
                 System.out.println(x);
-            }
-            else;
+            } else ;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,6 +25,7 @@ public class Person {
     public String getFirstName() {
         return firstName;
     }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -33,6 +33,7 @@ public class Person {
     public String getLastName() {
         return lastName;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -40,16 +41,18 @@ public class Person {
     public Address getAddress() {
         return address;
     }
+
     public void setAddress(Address address) {
         this.address = address;
     }
 
     @Override
     public String toString() {
-            return  "\n" + "Person: " +
-                    "FirstName - " + firstName + ", " +
-                    "LastName - " + lastName  +
-                    ", Location info: " + address.getCity() + ", ul." + address.getStreet() + ", #" + address.getHouseNumber() +
-                    '.';
+        return "\n" + "Person: " +
+                "FirstName - " + firstName + ", " +
+                "LastName - " + lastName +
+                ", Location info: " + address.getCity() + ", ul." + address.getStreet() + ", #" + address.getHouseNumber() +
+                '.';
     }
+}
 
