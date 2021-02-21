@@ -9,17 +9,15 @@ public class Person {
 
     public Person(String firstName, String lastName, Address address) throws NullFieldException {
         try {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.address = address;
-
             if (firstName == null || lastName == null || address == null) {
-                NullFieldException x = new NullFieldException("Error!");
-                System.out.println(x);
-            } else ;
+                throw new NullFieldException("Error! Поля должны быть заполнены");
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
     }
 
     public String getFirstName() {

@@ -11,9 +11,9 @@ import java.util.stream.Collectors;
 
 public class PersonIOUtil {
 
-    public static void writePersons(String filename, List<Person> persons) {
+    public static void writePersons(String fileName, List<Person> persons) {
 
-        try (FileWriter writer = new FileWriter(filename)) {
+        try (FileWriter writer = new FileWriter(fileName)) {
             for (Person person : persons) {
                 writer.write(person.getFirstName() + " :: " +
                         person.getLastName() + " :: " +
@@ -26,9 +26,8 @@ public class PersonIOUtil {
         }
     }
 
-    public static void readPersons(String filename) throws EmptySourceFileException {
-
-        String fileName = "Heroes.txt";
+    public static void readPersons(String fileName) throws EmptySourceFileException {
+        fileName = "Heroes.txt";
         List<String> list = new ArrayList<>();
 
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
@@ -47,18 +46,32 @@ public class PersonIOUtil {
     }
 }
 
+//    public static List<Person> readPersons (String fileName) throws EmptySourceFileException {
+//        List<Person> persons = new ArrayList<>();
+//        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))){
+//            String s;
+//            while ((s = reader.readLine() != null) {
+//                String[] dataArray = s.split("::");
+//                dataArray firstName = dataArray[0];
+//                dataArray lastName = dataArray[1];
+//                dataArray city = dataArray[2];
+//                dataArray street = dataArray[3];
+//                int houseNumber = Integer.parseInt(String.valueOf(dataArray[4]));
+//                Person person = new Person(fileName,lastName, new Address(city,street,houseNumber));
+//                persons.add(person);
+//            }
+//            if (persons.isEmpty() == true) {
+//                throw new EmptySourceFileException("Пусто...");
+//            }
+//        } catch (FileNotFoundException e) {
+//            throw new EmptySourceFileException("Такого файла не существует...");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return persons;
+//    }
+//}
 
-//      public ArrayList<Person> persons;
-//          Person[] parts = persons.toArray(new Person[0]);
-//          Person firstName = parts[0];
-//          Person lastName = parts[1];
-//          Person city = parts[2];
-//          Person street = parts[3];
-//          int houseNumber = Integer.parseInt(String.valueOf(parts[4]));
-
-//          persons.add(parts[0], parts[1], parts[2], parts[3], parts[4])
-//          return new Person(String firstName, String lastName, Address address);
-//      }
 
 
 
