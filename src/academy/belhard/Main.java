@@ -13,7 +13,7 @@ public class Main {
         Address address2 = new Address("Minsk", "Odoevskogo", 83);
         Address address3 = new Address("Minsk", "Fedorova", 13);
 
-        Person person1 = new Person(null, "Anderson", address1);
+        Person person1 = new Person("Guns", "Anderson", address1);
         Person person2 = new Person("Sherlok", "Holmes", address2);
         Person person3 = new Person("Harry", "Potter", address3);
 
