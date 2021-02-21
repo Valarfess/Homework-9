@@ -14,7 +14,7 @@ public class Person {
             this.address = address;
 
             if (firstName == null || lastName == null || address == null) {
-                NullFieldException x = new NullFieldException("Ошибка!");
+                NullFieldException x = new NullFieldException("Error!");
                 System.out.println(x);
             } else ;
         } catch (Exception e) {

@@ -34,7 +34,7 @@ public class PersonIOUtil {
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
             list = br.lines().collect(Collectors.toList());
             if (list.isEmpty() == true) {
-                EmptySourceFileException y = new EmptySourceFileException("Ошибка!");
+                EmptySourceFileException y = new EmptySourceFileException("Error!");
                 System.out.println(y);
             }
 
