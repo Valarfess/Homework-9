@@ -56,30 +56,10 @@ public class PersonIOUtil {
 //          Person street = parts[3];
 //          int houseNumber = Integer.parseInt(String.valueOf(parts[4]));
 
-    //          persons.add(parts[0], parts[1], parts[2], parts[3], parts[4])
+//          persons.add(parts[0], parts[1], parts[2], parts[3], parts[4])
 //          return new Person(String firstName, String lastName, Address address);
 //      }
-//    public List<Person> readPersons() throws IOException {
-//        List<Person> persons = new ArrayList<>();
-//        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-//            reader.readLine(); // пропускаем строку с заголовками
-//
-//            String csvString;
-//
-//            while ((csvString = reader.readLine()) != null) {
-//                Person person = TxtUtil.toObject(txtString);
-//
-//                persons.add(person);
-//
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        return persons;
-//    }
-//
-//}
+
 
 
 
