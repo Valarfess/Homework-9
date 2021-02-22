@@ -1,34 +1,24 @@
 package academy.belhard;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-//        Address address1 = new Address("Minsk", "Matusevicha", 54);
-//        Address address2 = new Address("Grodno", "Odoevskogo", 83);
-//        Address address3 = new Address("Brest", "Fedorova", 13);
-//
-//        Person person1 = new Person("Guns", "Anderson", address1);
-//        Person person2 = new Person("Sherlok", "Holmes", address2);
-//        Person person3 = new Person("Harry", "Potter", address3);
+        Person person1 = new Person("Guns", "Anderson", new Address("Minsk", "Matusevicha", 54));
+        Person person2 = new Person("Vasia", "Anderson", new Address("Grodno", "Lobanka", 13));
+        Person person3 = new Person("Gena", "Anderson", new Address("Brest", "Sovetskaya", 40));
 
-        Person person1 = new Person("Guns", "Anderson", new Address("Minsk","Matusevicha",54));
-        Person person2 = new Person("Guns", "Anderson", new Address("Grodno","Lobanka",13));
-        Person person3 = new Person("Guns", "Anderson", new Address("Brest","Sovetskaya",40));
-
-        System.out.println(person1 + " " + person2 + " " + person3);
+//        System.out.println(person1 + " " + person2 + " " + person3);
 
         List<Person> persons = new ArrayList<>();
         persons.add(person1);
         persons.add(person2);
         persons.add(person3);
 
-        PersonIOUtil.writePersons("Heroes.txt", persons);
-
-        PersonIOUtil.readPersons("Heroes.txt");
-
-        System.out.println(persons);
+//        PersonIOUtil.writePersons("Heroes.txt", persons);
+        System.out.println(PersonIOUtil.readPersons("Heroes.txt"));
     }
 }

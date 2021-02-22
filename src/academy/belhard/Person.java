@@ -46,10 +46,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return "\n" + "Person: " +
-                "FirstName - " + firstName + "," +
-                "LastName - " + lastName +
-                ", Location info:" + address.getCity() + "," + address.getStreet() + "," + address.getHouseNumber();
+        return "\n" + "Person:" +
+                "FirstName-" + firstName + "," +
+                "LastName-" + lastName +
+                ",Location info:" + address.getCity() + "," + address.getStreet() + "," + address.getHouseNumber();
     }
 }
 

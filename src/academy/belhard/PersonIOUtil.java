@@ -25,31 +25,27 @@ public class PersonIOUtil {
     }
 
     public static List<Person> readPersons(String fileName) throws EmptySourceFileException {
-        List<Person> persons = new ArrayList<>();
+        List<Person> persons1 = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String s;
             while ((s = reader.readLine()) != null) {
                 String[] dataArray = s.split(" ");
                 String firstName = dataArray[0];
-                String lastName = dataArray[2];
-                String city = dataArray[4];
-                String street = dataArray[6];
-                int houseNumber = Integer.parseInt(dataArray[8]);
+                String lastName = dataArray[1];
+                String city = dataArray[2];
+                String street = dataArray[3];
+                int houseNumber = Integer.parseInt(dataArray[4]);
                 Person person = new Person (firstName, lastName, new Address(city, street, houseNumber));
-                persons.add(person);
+                persons1.add(person);
 
             }
-                if (persons.isEmpty() == true) {
-                    throw new EmptySourceFileException("Error!");
+                if (persons1.size() == 0) {
+                    throw new EmptySourceFileException("Error! Файл пуст");
                 }
-            } catch (FileNotFoundException e){
-                throw new EmptySourceFileException("Такого файла не существует...");
-            } catch(IOException e){
-                e.getMessage();
-            } catch (NullFieldException e) {
-            e.printStackTrace();
-        }
-        return persons;
+            } catch(IOException | NullFieldException e){
+            throw new EmptySourceFileException("Error!Файл отсутствует");
+            }
+        return persons1;
         }
     }
 
