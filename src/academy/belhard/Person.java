@@ -49,7 +49,7 @@ public class Person {
         return "\n" + "Person: " +
                 "FirstName - " + firstName + ", " +
                 "LastName - " + lastName +
-                ", Location info: " + address.getCity() + ", ul." + address.getStreet() + ", #" + address.getHouseNumber() +
+                ", Location info: " + address.getCity() + ", " + address.getStreet() + ", " + address.getHouseNumber() +
                 '.';
     }
 }
