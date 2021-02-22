@@ -47,10 +47,9 @@ public class Person {
     @Override
     public String toString() {
         return "\n" + "Person: " +
-                "FirstName - " + firstName + ", " +
+                "FirstName - " + firstName + "," +
                 "LastName - " + lastName +
-                ", Location info: " + address.getCity() + ", " + address.getStreet() + ", " + address.getHouseNumber() +
-                '.';
+                ", Location info:" + address.getCity() + "," + address.getStreet() + "," + address.getHouseNumber();
     }
 }
 

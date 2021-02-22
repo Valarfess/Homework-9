@@ -1,3 +1,3 @@
 Guns  Anderson  Minsk  Matusevicha  54
-Sherlok  Holmes  Minsk  Odoevskogo  83
-Harry  Potter  Minsk  Fedorova  13
+Guns  Anderson  Grodno  Lobanka  13
+Guns  Anderson  Brest  Sovetskaya  40

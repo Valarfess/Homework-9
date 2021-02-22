@@ -19,7 +19,7 @@ public class PersonIOUtil {
                         person.address.getStreet() + "  " +
                         person.address.getHouseNumber() + "\n");
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -31,12 +31,13 @@ public class PersonIOUtil {
             while ((s = reader.readLine()) != null) {
                 String[] dataArray = s.split(" ");
                 String firstName = dataArray[0];
-                String lastName = dataArray[1];
-                String city = dataArray[2];
-                String street = dataArray[3];
-                int houseNumber = Integer.parseInt(dataArray[4]);
+                String lastName = dataArray[2];
+                String city = dataArray[4];
+                String street = dataArray[6];
+                int houseNumber = Integer.parseInt(dataArray[8]);
                 Person person = new Person (firstName, lastName, new Address(city, street, houseNumber));
                 persons.add(person);
+
             }
                 if (persons.isEmpty() == true) {
                     throw new EmptySourceFileException("Error!");

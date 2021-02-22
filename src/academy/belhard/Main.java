@@ -6,13 +6,17 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        Address address1 = new Address("Minsk", "Matusevicha", 54);
-        Address address2 = new Address("Minsk", "Odoevskogo", 83);
-        Address address3 = new Address("Minsk", "Fedorova", 13);
+//        Address address1 = new Address("Minsk", "Matusevicha", 54);
+//        Address address2 = new Address("Grodno", "Odoevskogo", 83);
+//        Address address3 = new Address("Brest", "Fedorova", 13);
+//
+//        Person person1 = new Person("Guns", "Anderson", address1);
+//        Person person2 = new Person("Sherlok", "Holmes", address2);
+//        Person person3 = new Person("Harry", "Potter", address3);
 
-        Person person1 = new Person("Guns", "Anderson", address1);
-        Person person2 = new Person("Sherlok", "Holmes", address2);
-        Person person3 = new Person("Harry", "Potter", address3);
+        Person person1 = new Person("Guns", "Anderson", new Address("Minsk","Matusevicha",54));
+        Person person2 = new Person("Guns", "Anderson", new Address("Grodno","Lobanka",13));
+        Person person3 = new Person("Guns", "Anderson", new Address("Brest","Sovetskaya",40));
 
         System.out.println(person1 + " " + person2 + " " + person3);
 
@@ -21,15 +25,10 @@ public class Main {
         persons.add(person2);
         persons.add(person3);
 
-        PersonIOUtil p1 = new PersonIOUtil();
-        p1.writePersons("Heroes.txt", persons);
+        PersonIOUtil.writePersons("Heroes.txt", persons);
 
-        p1.readPersons("Heroes.txt");
+        PersonIOUtil.readPersons("Heroes.txt");
 
-
-
-
-
+        System.out.println(persons);
     }
-
 }
