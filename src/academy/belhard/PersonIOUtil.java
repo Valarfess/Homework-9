@@ -33,15 +33,15 @@ public class PersonIOUtil {
         try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
             list = br.lines().collect(Collectors.toList());
             if (list.isEmpty() == true) {
-                EmptySourceFileException y = new EmptySourceFileException("Error!");
-                System.out.println(y);
+                throw new EmptySourceFileException("Error!");
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
 
         list.forEach(System.out::println);
+
 
     }
 }
@@ -57,16 +57,16 @@ public class PersonIOUtil {
 //                dataArray city = dataArray[2];
 //                dataArray street = dataArray[3];
 //                int houseNumber = Integer.parseInt(String.valueOf(dataArray[4]));
-//                Person person = new Person(fileName,lastName, new Address(city,street,houseNumber));
+//                Person person = new Person(firstName,lastName, new Address(city,street,houseNumber));
 //                persons.add(person);
 //            }
 //            if (persons.isEmpty() == true) {
-//                throw new EmptySourceFileException("Пусто...");
+//                throw new EmptySourceFileException("Error!");
 //            }
 //        } catch (FileNotFoundException e) {
 //            throw new EmptySourceFileException("Такого файла не существует...");
 //        } catch (IOException e) {
-//            e.printStackTrace();
+//            System.err.println(e.getMessage());
 //        }
 //        return persons;
 //    }

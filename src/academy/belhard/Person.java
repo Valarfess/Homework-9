@@ -12,8 +12,8 @@ public class Person {
             if (firstName == null || lastName == null || address == null) {
                 throw new NullFieldException("Error! Поля должны быть заполнены");
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (NullFieldException e) {
+            System.err.println(e.getMessage());
         }
         this.firstName = firstName;
         this.lastName = lastName;
