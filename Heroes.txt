@@ -1,0 +1,3 @@
+Guns  Anderson  Minsk  Matusevicha  54
+Vasia  Anderson  Grodno  Lobanka  13
+Gena  Anderson  Brest  Sovetskaya  40

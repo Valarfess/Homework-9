@@ -9,7 +9,7 @@ public class Person {
 
     public Person(String firstName, String lastName, Address address) throws NullFieldException {
         try {
-            if (firstName == null || lastName == null || address == null) {
+            if (firstName == null && lastName == null || address == null) {
                 throw new NullFieldException("Error! Поля должны быть заполнены");
             }
         } catch (NullFieldException e) {
@@ -24,7 +24,10 @@ public class Person {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName) throws NullFieldException {
+        if (firstName == null) {
+            throw new NullFieldException("Error! Поля должны быть заполнены");
+        }
         this.firstName = firstName;
     }
 
@@ -32,7 +35,10 @@ public class Person {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName) throws NullFieldException {
+        if (lastName == null) {
+            throw new NullFieldException("Error! Поля должны быть заполнены");
+        }
         this.lastName = lastName;
     }
 
@@ -40,7 +46,10 @@ public class Person {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(Address address) throws NullFieldException {
+        if (address == null) {
+            throw new NullFieldException("Error! Поля должны быть заполнены");
+        }
         this.address = address;
     }
 
