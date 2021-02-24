@@ -31,10 +31,10 @@ public class PersonIOUtil {
             while ((s = reader.readLine()) != null) {
                 String[] dataArray = s.split(" ");
                 String firstName = dataArray[0];
-                String lastName = dataArray[1];
-                String city = dataArray[2];
-                String street = dataArray[3];
-                int houseNumber = Integer.parseInt(dataArray[4]);
+                String lastName = dataArray[2];
+                String city = dataArray[4];
+                String street = dataArray[6];
+                int houseNumber = Integer.parseInt(dataArray[8]);
                 Person person = new Person(firstName, lastName, new Address(city, street, houseNumber));
                 persons1.add(person);
 

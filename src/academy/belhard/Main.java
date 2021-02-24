@@ -11,14 +11,14 @@ public class Main {
         Person person2 = new Person("Vasia", "Anderson", new Address("Grodno", "Lobanka", 13));
         Person person3 = new Person("Gena", "Anderson", new Address("Brest", "Sovetskaya", 40));
 
-//        System.out.println(person1 + " " + person2 + " " + person3);
+        System.out.println(person1 + " " + person2 + " " + person3);
 
         List<Person> persons = new ArrayList<>();
         persons.add(person1);
         persons.add(person2);
         persons.add(person3);
 
-//        PersonIOUtil.writePersons("Heroes.txt", persons);
+        PersonIOUtil.writePersons("Heroes.txt", persons);
         System.out.println(PersonIOUtil.readPersons("Heroes.txt"));
     }
 }
