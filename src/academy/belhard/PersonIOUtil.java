@@ -35,19 +35,23 @@ public class PersonIOUtil {
                 String city = dataArray[2];
                 String street = dataArray[3];
                 int houseNumber = Integer.parseInt(dataArray[4]);
-                Person person = new Person (firstName, lastName, new Address(city, street, houseNumber));
+                Person person = new Person(firstName, lastName, new Address(city, street, houseNumber));
                 persons1.add(person);
 
             }
-                if (persons1.size() == 0) {
-                    throw new EmptySourceFileException("Error! Файл пуст");
-                }
-            } catch(IOException | NullFieldException e){
-            throw new EmptySourceFileException("Error!Файл отсутствует");
+            if (persons1.size() == 0) {
+                throw new EmptySourceFileException("Error! Файл пуст");
             }
-        return persons1;
-        }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NullFieldException e) {
+            e.printStackTrace();
+        }return persons1;
     }
+}
 
 
 
