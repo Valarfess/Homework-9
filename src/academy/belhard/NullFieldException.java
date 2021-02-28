@@ -1,6 +1,6 @@
 package academy.belhard;
 
-public class NullFieldException extends Exception{
+public class NullFieldException extends RuntimeException{
     public NullFieldException(String message) {
         super("Поля должны быть заполнены");
     }
